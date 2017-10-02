@@ -1,0 +1,104 @@
+
+<html>
+	<head>
+		<style type="text/css">
+		div#mudandoback {
+			background: green;
+			width: 100px;
+			height: 50px;
+		}
+		</style>
+			<script>
+				var clique = 1;
+				var cores = ["green", "blue"];
+
+				window.onload = function() {
+					var ins = document.querySelector("#instrucao");
+					ns.style.background = "lightgray";
+					ins.style.display = "inline";
+				}
+
+				function alterar(){
+					var el = document.querySelector("#instrucao");
+					el.innerHTML = "Clique aqui! ("+clique+")";
+					clique++;
+				}
+
+				function mudaCor(indiceCor){
+					document.querySelector("#mudandoback").style.background = cores[indiceCor];
+				}
+
+			</script>
+	</head>
+	<body>
+		<h1>Atividade 1</h1>
+			
+			1.<b>Crie uma expressão com no mínimo 4 valores utilizando os operadores (*,+,/,-) retorne: 45, -30, 135, 90.</b><p>
+			1 * 40 + 8 - 3 = 45<br>
+			240 - 90 * 3 / 1 = -30<br>
+			1 * 280 / 2 - 5 = 135<br></p><br><br>
+
+			2.<b>Crie uma expressão com no mínimo 4 valores utilizando os operadores (*,+,/,-) e obrigatoriamente utilizando pelo menos um () e uma operação com módulo (%) retorne: 2, 50, -80, 10.</b><p>
+			</b><p>(20 + 1 * 10) % 4<br>
+			90 % 4 = 2<br>
+			1050 % 1000 = 50<br>
+			-9000 % 8920 = -80<br>
+			100 % 90 = 10<br></p><br><br>
+
+			3.<b>Crie uma expressão booleana que utilize pelo menos 3 operadores boleanos que retorne: true, false.</b><p>
+			((20 == 20 || 8 == 4) && (4 == 4 && 4 != 8)); // true<br>
+			((20 == 20 || 8 == 4) && (4 == 4 && 4 != 4)); // false<br><p><br><br><br>	
+
+		<h1>Atividade 2</h1>
+			
+			1.<b>Escreva uma string com seu nome e sobrenome.</b><p>
+			var nome = "Lucas Senna";<br>
+			var sobrenome = "Cardoso Rodrigues";<br
+			var nomeCompleto = nome + sobrenome;<br><p><br><br>
+
+			2.<b>Escreva uma string com seu nome e sua idade, como sendo um inteiro, separados por espaço. Exemplo “Danilo, idade 28 anos”</b><p>
+			var nome = "Lucas, ";<br>
+			var idade = 22;<br>
+			var complemento = " anos";<br>
+			var nomeComIdade = nome + idade + complemento;<br><p><br><br>
+
+			3.<b>Crie uma expressão booleana que utilize pelo menos 3 operadores boleanos que retorne: true, false.</b><p>
+			"fortaleza" == "FORTALEZA"; // false<br>
+			"fortaleza" == "fortaleza"; // true<br><p><br><br><br>
+
+		<h1>Prática 01</h1>
+			
+			1.<b>Escreva strings que apresentem os seguintes resultados.</b><p>
+			<b>Resultado 01</b><p>
+				
+			“Hoje eu acordei e depois:<br>
+			Tomei banho<br>
+			Peguei o ônibus<br>
+			Cheguei na FLF”<br><p><br	>
+
+			2.<b>Resultado 02</b><p>
+
+			“Hoje não tenho<br>
+			tempo\dinheiro para<br>
+			almoçar, irei ficar “varado<br>
+			de fome””<br><p>
+
+			var s1 = "Hoje eu acordei e depois\n\tTomei banho\n\tPeguei o ônibus\n\tCheguei a FLF";<br>
+			var s2 = "Hoje eu não tenho tempo\\dinheiro para almoçar, irei ficar \"Varado de fome\"";<br><p><br>
+
+			2.<b>Escreva uma string que contenha exatamente 40 caractes.</b><p>
+			var s3 = "Eu escrevi uma String com 40 caracteres.";<br><p><br><br><br>
+
+		<h1>Prática 02</h1>
+			1.<b>Crie uma div com nome #instrucao e a partir do javascript defina uma cor de background e cor do texto, e um texto contendo a frase: “Clique Aqui!”, além disso toda vez que o usuário clicar na div será adicionado um novo texto contendo a quantidade de vezes em que foram realizados os cliques, exemplo, “Clique Aqui! (5)”.</b><br>
+			
+			<div id="instrucao" onClick="alterar()">
+				Clique Aqui!
+			</div><p>
+
+			2.<b>Crie uma div com nome #mudandoback com o tamanho 100px por 50px na cor verde. Toda vez que o mouse passar por cima desta div esta mudará sua cor de background para azul e quando o mouse sair de cima da div esta voltará para sua cor de background original (verde).</b><br>
+			
+			<div id="mudandoback" onmouseenter="mudaCor(1)" onmouseleave="mudaCor(0)"></div>
+	
+	</body>
+</html>
